@@ -138,20 +138,21 @@ void moveServo(int movement, Servo &servo, int &servoValue) {
     case 1:
         if(servoValue >= 10 && servoValue < 170)
         {
-          servoValue = servoValue + 2;
+          servoValue = servoValue + 5;
           servo.write(servoValue);
+          delay(10);
         }
     break;
     case -1:
         if(servoValue <= 170 && servoValue > 10)
         {
-          servoValue = servoValue - 2;
+          servoValue = servoValue - 5;
           servo.write(servoValue);
+          delay(10);
         }
     break;
   }
 }
-
 
 void moveMotor(int motorPin0, int motorPin1, int velocity) {
   if (velocity == UP)
